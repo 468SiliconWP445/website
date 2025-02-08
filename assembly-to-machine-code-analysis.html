@@ -6,7 +6,11 @@
 </head>
 <body>
 
-<h1>Analysing a simple instruction</h1>
+<h1>Assembly to Machine Code Analysis</h1>
+<p><i>All multi byte hexadecimal values on this page are represented in little-endian format, where the least significant byte comes first, e.g. <code>0F 00</code> is the same as <code>0x000F</code>.</i></p>
+  <br>
+  <br>
+<h2>Analysing a simple instruction</h2>
   <br>
   <br>
 <p>For example, we might have the instruction <code>mov ax, 5</code>. This directly translates to <code>B8 05 00</code> in hexadecimal or <code>10111000 00000101 00000000</code> in binary. </p>
@@ -23,18 +27,34 @@
   <br>
   <br>
   <br>
-<h1>Another simple set of instructions</h1>
+<h2>Another simple set of instructions</h2>
   <br>
   <br>
 <p>Let's say we have the instructions</p>
 <p><code>mov ax, 5</code></p>
 <p><code>mov bx, 15</code></p>
 <p><code>add ax, bx</code></p>
+  <br>
 <p>The hexadecimal for these instructions is as follows:</p>
 <p><code>B8 05 00 BB 0F 00 01 D8</code></p>
+  <br>
 <p>Or, in binary:</p>
 <p><code>10111000 00000101 00000000 10111011 00001111 00000000 00000001 11011000</code></p>
+  <br>
 <p>Again, <code>mov ax, 5</code> corresponds to <code>B8 05 00</code> (<code>10111000 00000101 00000000</code>), as shown before. </p>
-  
+  <br>
+<p>The instruction <code>mov bx, 15</code> corresponds to BB 0F 00.</p>
+<p>><code>BB</code> is the opcode for <code>mov bx, imm16</code>. <code>mov bx, imm16</code> is the same as <code>mov ax, imm16</code> (which is explained above), except that the 16 bit value is moved in to the register <code>bx</code instead of <code>ax</code>.</p>
+<p><code>0F 00</code> is hexadecimal for 15, which is the immediate value that is moved in to <code>bx</code>.</p>
+<p><code>01</code> is the opcode for <code>add r/m16, r16</code>, which means it adds a 16 bit register or memory operand with another 16-bit register.</p>
+<p><code>D8</code> is the ModR/M byte, which specifies the source and destination registers.</p>
+<p>The <code>Mod</code> field specifies whether the operand are registers or memory, the <code>Reg</code> field specifies the source register, and the <code>R/M</code> field specifies the destination register or memory operand.</p>
+<p>In binary, the hexidecimal equivalent of <code>D8</code> is <code>11011000</code>.</p>
+<p>This can be broken down in to three parts:</p>
+<p>The first two bits, in this case <code>11</code>, specify the Mod (mode) field. <code>11</code> means both operands are registers (not memory).</p>
+<p>The next three bits, the Reg field, in this case, has <code>011</code> as its value. <code>011</code> represents the <code>bx</code> register (the source register).</p>
+<p>The last three bits, the R/M field, in this case, has <code>000</code> as its value. <code>000</code> represents the <code>ax</code> register (the destination register).</p>
+<p>This can be interpreted as <code>ax = ax + bx</code>.</p>
+
 </body>
 </html>
