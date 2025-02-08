@@ -2,17 +2,11 @@ body {
   background-color: #000000;
 }
 
-h1 {
-  color: #ffffff;
-  font-family: "Source Code Pro", monospace;
+h1, h4, p {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-h4 {
-  color: #ffffff;
-  font-family: "Source Code Pro", monospace;
-}
-
-p {
-  color: #ffffff;
-  font-family: "Source Code Pro", monospace;
+code { 
+  color: #ffcc00;
+  font-family: 'Source Code Pro', monospace;
 }
