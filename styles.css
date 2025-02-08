@@ -2,6 +2,11 @@ body {
   background-color: #000000;
 }
 
+h1 {
+  color: #ffffff;
+  font-family: "Courier New", monospace;
+}
+
 h4 {
   color: #ffffff;
   font-family: "Courier New", monospace;
