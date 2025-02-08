@@ -1,0 +1,16 @@
+B8 05 00 //mov ax, 5
+BB 03 00 //mov bx, 3
+01 D8 //add ax, bx
+83 F8 08 //cmp ax, 8
+74 05 //jump 5 bytes forward to if_equal
+83 E8 02 //sub ax, 2
+EB 07 //jump 7 bytes forward to quit
+//if_equal
+89 C1 //mov cx, ax
+83 E9 05 //sub cx, 5
+EB 00 //jump 0 bytes forward to quit
+//quit
+B4 4C //mov ah, 0x4C
+A0 20 00 //mov al, [exit_code]
+CD 21 //int 0x21
+00 //exit code
