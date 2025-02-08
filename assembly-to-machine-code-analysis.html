@@ -56,5 +56,73 @@
   <br>
 <p>This can be interpreted as <code>ax = ax + bx</code>.</p>
 
+<table border="1">
+<caption>A slightly more complex DOS program</caption>
+<thead>
+<tr>
+  <th>Machine Code (Hex)</th>
+  <th>Header 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>B8 05 00</code></td>
+  <td><code>mov ax, 5</code></td>
+</tr>
+<tr>
+  <td><code>BB 03 00</code></td>
+  <td><code>mov bx, 3</code></td>
+</tr>
+<tr>
+  <td><code>01 D8</code></td>
+  <td><code>add ax, bx</code></td>
+</tr>
+<tr>
+  <td><code>83 F8 08</code></td>
+  <td><code>cmp ax, 8</code></td>
+</tr>
+<tr>
+  <td><code>74 05</code></td>
+  <td><code>jmp if_equal (jump 5 bytes forward)</code></td>
+</tr>
+<tr>
+  <td><code>83 E8 02</code></td>
+  <td><code>sub ax, 2</code></td>
+</tr>
+<tr>
+  <td><code>EB 07</code></td>
+  <td><code>jmp quit (jump 7 bytes forward)</code></td>
+</tr>
+<tr>
+  <td><code>89 C1</code></td>
+  <td><code>mov cx, ax</code></td>
+</tr>
+<tr>
+  <td><code>83 E9 05</code></td>
+  <td><code>sub cx, 5</code></td>
+</tr>
+<tr>
+  <td><code>EB 00</code></td>
+  <td><code>jmp quit (jump 0 bytes forward)</code></td>
+</tr>
+<tr>
+  <td><code>B4 4C</code></td>
+  <td><code>mov ah, 0x4C</code></td>
+</tr>
+<tr>
+  <td><code>A0 20 00</code></td>
+  <td><code>mov al, [exit_code] (located at address 0x0020 (20 00 in little-endian hex))</code></td>
+</tr>
+<tr>
+  <td><code>CD 21</code></td>
+  <td><code>int 0x21</code></td>
+</tr>
+<tr>
+  <td><code>00</code></td>
+  <td><code>exit code (in this case, 0)</code></td>
+</tr>
+</tbody>
+</table>
+
 </body>
 </html>
