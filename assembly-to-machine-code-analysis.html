@@ -20,6 +20,21 @@
 <p><code>mov</code> copies the data from the source (which in this case is an immediate value, 5), to the destination (in this case the <code>ax</code> 16 bit register.</p>
 <p><code>ax</code>, the accumulator register, is a 16 bit register in the x86 architecture, and it is a general purpose register.</p>
 <p><code>imm16</code> is an immediate 16 bit value. It is different to a value stored in memory or registers, as it is constant data embedded directly in to the instruction.</p>
+  <br>
+  <br>
+  <br>
+<h1>Another simple set of instructions</h1>
+  <br>
+  <br>
+<p>Let's say we have the instructions</p>
+<p><code>mov ax, 5</code></p>
+<p><code>mov bx, 15</code></p>
+<p><code>add ax, bx</code></p>
+<p>The hexadecimal for these instructions is as follows:</p>
+<p><code>B8 05 00 BB 0F 00 01 D8</code></p>
+<p>Or, in binary:</p>
+<p><code>10111000 00000101 00000000 10111011 00001111 00000000 00000001 11011000</code></p>
+<p>Again, <code>mov ax, 5</code> corresponds to <code>B8 05 00</code> (<code>10111000 00000101 00000000</code>), as shown before. </p>
   
 </body>
 </html>
