@@ -46,11 +46,14 @@
 <p><code>01</code> is the opcode for <code>add r/m16, r16</code>, which means it adds a 16 bit register or memory operand with another 16-bit register.</p>
 <p><code>D8</code> is the ModR/M byte, which specifies the source and destination registers.</p>
 <p>The <code>Mod</code> field specifies whether the operand are registers or memory, the <code>Reg</code> field specifies the source register, and the <code>R/M</code> field specifies the destination register or memory operand.</p>
+  <br>
 <p>In binary, the hexidecimal equivalent of <code>D8</code> is <code>11011000</code>.</p>
+  <br>
 <p>This can be broken down in to three parts:</p>
 <p>The first two bits, in this case <code>11</code>, specify the Mod (mode) field. <code>11</code> means both operands are registers (not memory).</p>
 <p>The next three bits, the Reg field, in this case, has <code>011</code> as its value. <code>011</code> represents the <code>bx</code> register (the source register).</p>
 <p>The last three bits, the R/M field, in this case, has <code>000</code> as its value. <code>000</code> represents the <code>ax</code> register (the destination register).</p>
+  <br>
 <p>This can be interpreted as <code>ax = ax + bx</code>.</p>
 
 </body>
