@@ -62,64 +62,79 @@
 <table border="1">
 <thead>
 <tr>
+  <th>Machine Code (Binary)</th>
   <th>Machine Code (Hex)</th>
   <th>Assembly / Explanation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+  <td><code>10111000 00000101 00000000</code></td>
   <td><code>B8 05 00</code></td>
   <td><code>mov ax, 5</code></td>
 </tr>
 <tr>
+  <td><code>10111011 00000011 00000000</code></td>
   <td><code>BB 03 00</code></td>
   <td><code>mov bx, 3</code></td>
 </tr>
 <tr>
+  <td><code>00000001 11011000</code></td>
   <td><code>01 D8</code></td>
   <td><code>add ax, bx</code></td>
 </tr>
 <tr>
+  <td><code>10000011 11111000 00001000</code></td>
   <td><code>83 F8 08</code></td>
   <td><code>cmp ax, 8</code></td>
 </tr>
 <tr>
+  <td><code>01110100 00000101</code></td>
   <td><code>74 05</code></td>
   <td><code>jmp if_equal (jump 5 bytes forward)</code></td>
 </tr>
 <tr>
+  <td><code>10000011 11101000 00000010</code></td>
   <td><code>83 E8 02</code></td>
   <td><code>sub ax, 2</code></td>
 </tr>
 <tr>
+  <td><code>11101011 00000111</code></td>
   <td><code>EB 07</code></td>
   <td><code>jmp quit (jump 7 bytes forward)</code></td>
 </tr>
 <tr>
+  <td><code>10001001 11000001</code></td>
   <td><code>89 C1</code></td>
   <td><code>mov cx, ax</code></td>
 </tr>
 <tr>
+  <td><code>10000011 11101001 00000101</code></td>
   <td><code>83 E9 05</code></td>
   <td><code>sub cx, 5</code></td>
 </tr>
 <tr>
+  <td><code>11101011 00000000</code></td>
   <td><code>EB 00</code></td>
   <td><code>jmp quit (jump 0 bytes forward)</code></td>
 </tr>
 <tr>
+  <td><code>10110100 01001100</code></td>
   <td><code>B4 4C</code></td>
   <td><code>mov ah, 0x4C</code></td>
 </tr>
 <tr>
+  <td><code>10100000 00100000 00000000</code></td>
   <td><code>A0 20 00</code></td>
   <td><code>mov al, [exit_code] (located at address 0x0020 (20 00 in little-endian hex))</code></td>
 </tr>
 <tr>
+  <td><code>11001101 00100001</code></td>
   <td><code>CD 21</code></td>
   <td><code>int 0x21</code></td>
 </tr>
 <tr>
+  <td><code>00000000</code></td>
   <td><code>00</code></td>
   <td><code>exit code (in this case, 0)</code></td>
 </tr>
