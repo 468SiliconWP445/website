@@ -12,23 +12,20 @@
   <br>
 <h2>Analysing a simple instruction</h2>
   <br>
-  <br>
 <p>For example, we might have the instruction <code>mov ax, 5</code>. This directly translates to <code>B8 05 00</code> in hexadecimal or <code>10111000 00000101 00000000</code> in binary. </p>
   <br>
 <h4>The opcode</h4>
 <p>The opcode (operation code), <code>B8</code> (or, in binary, <code>10111000</code>), is the opcode for <code>mov ax, imm16</code>.</p>
   <br>
-<h4>The operand</h4>
-<p>The next two bytes, <code>05 00</code>, (or, in binary, <code>00000101 00000000</code>), are the immediate value that is moved into <code>ax</code>.</p>
-  <br>
 <p><code>mov</code> copies the data from the source (which in this case is an immediate value, 5), to the destination (in this case the <code>ax</code> 16 bit register).</p>
 <p><code>ax</code>, the accumulator register, is a 16 bit register in the x86 architecture, and it is a general purpose register.</p>
 <p><code>imm16</code> is an immediate 16 bit value. It is different to a value stored in memory or registers, as it is constant data embedded directly in to the instruction.</p>
   <br>
+<h4>The operand</h4>
+<p>The next two bytes, <code>05 00</code>, (or, in binary, <code>00000101 00000000</code>), are the immediate value that is moved into <code>ax</code>.</p>
   <br>
   <br>
 <h2>Another simple set of instructions</h2>
-  <br>
   <br>
 <p>Let's say we have the instructions</p>
 <p><code>mov ax, 5</code></p>
