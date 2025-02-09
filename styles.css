@@ -2,7 +2,7 @@ body {
   background-color: #000000;
 }
 
-h1, h2, h4, p, th {
+h1, h2, h4, p, th, td {
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
 }
