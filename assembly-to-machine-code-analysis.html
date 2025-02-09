@@ -92,7 +92,7 @@
 <tr>
   <td><code>01110100 00000101</code></td>
   <td><code>74 05</code></td>
-  <td><code>jmp if_equal (jump 5 bytes forward)</code></td>
+  <td><code>jmp if_equal</code> (jump 5 bytes forward)</td>
 </tr>
 <tr>
   <td><code>10000011 11101000 00000010</code></td>
@@ -102,7 +102,7 @@
 <tr>
   <td><code>11101011 00000111</code></td>
   <td><code>EB 07</code></td>
-  <td><code>jmp quit (jump 7 bytes forward)</code></td>
+  <td><code>jmp quit</code> (jump 7 bytes forward)</td>
 </tr>
 <tr>
   <td><code>10001001 11000001</code></td>
@@ -117,7 +117,7 @@
 <tr>
   <td><code>11101011 00000000</code></td>
   <td><code>EB 00</code></td>
-  <td><code>jmp quit (jump 0 bytes forward)</code></td>
+  <td><code>jmp quit</code> (jump 0 bytes forward)</td>
 </tr>
 <tr>
   <td><code>10110100 01001100</code></td>
@@ -127,7 +127,7 @@
 <tr>
   <td><code>10100000 00100000 00000000</code></td>
   <td><code>A0 20 00</code></td>
-  <td><code>mov al, [exit_code] (located at address 0x0020 (20 00 in little-endian hex))</code></td>
+  <td><code>mov al, [exit_code]</code> (located at address <code>0x0020</code> (<code>20 00</code> in little-endian hex))</td>
 </tr>
 <tr>
   <td><code>11001101 00100001</code></td>
@@ -137,7 +137,7 @@
 <tr>
   <td><code>00000000</code></td>
   <td><code>00</code></td>
-  <td><code>exit code (in this case, 0)</code></td>
+  <td><code>exit code</code> (in this case, 0)</td>
 </tr>
 </tbody>
 </table>
