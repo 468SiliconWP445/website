@@ -1,3 +1,4 @@
+;Simple bootloader that writes "Hello"
 BITS 16
 ORG 0x7C00
 
